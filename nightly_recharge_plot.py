@@ -35,6 +35,7 @@ if __name__ == '__main__':
         y_axis.append(date_value[value_name])
         dates.append(date_value["date"])
 
-  ma_data = get_moving_average(y_axis, 100)
+  window_size = 28
+  ma_data = get_moving_average(y_axis, window_size)
   dates = dates[len(dates) - len(ma_data):]
   plot_data(dates, ma_data)
